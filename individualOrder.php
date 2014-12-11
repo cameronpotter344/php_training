@@ -36,7 +36,7 @@ $name=$name_array['name']; echo $name; ?></h1>
 <!--TABLE-->
  <table class="hover_table">
     <tr>
-
+        <th>First Name</th>
         <th>DVD Title</th>
         <th>Rent Date</th>
         <th>Due Date</th>
