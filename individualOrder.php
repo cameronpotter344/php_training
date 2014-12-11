@@ -170,21 +170,15 @@ if(count($array)>1)
 //Cancel Order
 if(isset($_POST['cancel']))
 {
-    function cancel_order()
-    {
-        $id = $_POST['id'];
         $database ->update("DELETE FROM dvd_order WHERE order_id = '$order_id'");
         $database ->update("DELETE FROM orders WHERE id = '$order_id'");
-    }
-    echo
-    '
+        echo
+        '
             <script language="javascript">
-            if (confirm("Are you sure you want to cancel the order?") == true) 
-                {
-                    '.cancel_order().' 
-                };
+            if (confirm("Order has been cancled") == true) 
+                {window.location="individualOrder.php"};
             </script>   
-    ';
+        ';
 }
 
 ?>
